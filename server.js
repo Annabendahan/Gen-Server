@@ -3,6 +3,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var apiRouter = require('./apiRouter').router;
+var port = process.env.PORT || 8080;
 
 // instancite server 
 
@@ -26,6 +27,6 @@ server.use('/api/', apiRouter);
 //serveru en ecoute
 
 
-server.listen(8080, function () {
+server.listen(port, function () {
     console.log('Server en écoute')
 })
